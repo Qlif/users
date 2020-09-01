@@ -1,7 +1,7 @@
 import React, {useLayoutEffect} from 'react';
 import UserInfo from './UserInfo';
 import {useDispatch, useSelector} from 'react-redux';
-import * as action from '../../redux/actions'
+import * as action from '../../redux/actions/actions'
 
 const  Users = () => {
   const dispach = useDispatch();
