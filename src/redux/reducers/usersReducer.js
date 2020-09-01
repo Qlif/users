@@ -1,7 +1,8 @@
 import * as type from '../actionTypes/types';
 
 const initialState = {
-  users:[]
+  users:[],
+  userPosts:[]
 };
 
 export const usersReducer = (state = initialState, action)=>{
@@ -10,6 +11,11 @@ export const usersReducer = (state = initialState, action)=>{
       return {
         ...state,
         users: action.payload
+      }
+      case type.SET_USER_POSTS:
+      return {
+        ...state,
+        userPosts: action.payload
       }
     default: return state
   }

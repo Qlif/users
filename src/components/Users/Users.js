@@ -9,23 +9,23 @@ const  Users = () => {
     dispatch(action.setUsers());
   },[dispatch]);
 
-  const users = useSelector(state => state.users.users);
+  const users = useSelector(state => state.usersStore.users);
 
   let content;
   if(!users.length){
      content = <div className="row"><h2>Server not available</h2></div>;
   }else{
     content = users.map(user => {
-        return <UserInfo
-          id={user.id}
-          name={user.name}
-          username={user.username}
-          email={user.email}
-          key={user.id}
-        />
-      });
+      return<UserInfo
+              id={user.id}
+              name={user.name}
+              username={user.username}
+              email={user.email}
+              key={user.id}
+            />
+    });
   }
-  return (content)
+  return content
 }
 
 export default Users;
