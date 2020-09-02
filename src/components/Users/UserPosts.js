@@ -9,7 +9,7 @@ function UserPosts(props) {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(setUsersPosts(idUser));
-  }, [dispatch]);
+  }, [dispatch,idUser]);
 
   let content;
   if (!userPosts) {
