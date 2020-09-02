@@ -1,15 +1,15 @@
 import * as type from '../actionTypes/types';
 
 const initialState = {
-  users:[],
+  userPosts:[]
 };
 
-export const usersReducer = (state = initialState, action)=>{
+export const usersPostReducer = (state = initialState, action)=>{
   switch (action.type){
-    case type.SET_USERS:
+    case type.SET_USER_POSTS:
       return {
         ...state,
-        users: action.payload
+        userPosts: action.payload
       }
     default: return state
   }

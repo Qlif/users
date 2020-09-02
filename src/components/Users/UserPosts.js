@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom';
 
 function UserPosts(props) {
   const idUser = props.match.params.idUser
-  const userPosts = useSelector(state => state.usersStore.userPosts)
+  const userPosts = useSelector(state => state.userPostsStore.userPosts)
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(setUsersPosts(idUser));
