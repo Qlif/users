@@ -12,8 +12,8 @@ function App() {
         <div className="col">
           <Router>
             <Switch>
-              <Route path="/" component={Users}/>
-              <Route path="/userposts/idUser" component={UserPosts}/>
+              <Route path="/userposts/:idUser" children={<UserPosts />}/>
+              <Route exact path="/" component={Users}/>
             </Switch>
           </Router>
         </div>
