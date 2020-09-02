@@ -12,7 +12,7 @@ function App() {
         <div className="col">
           <Router>
             <Switch>
-              <Route path="/userposts/:idUser" children={<UserPosts />}/>
+              <Route path="/userposts/:idUser" component={UserPosts}/>
               <Route exact path="/" component={Users}/>
             </Switch>
           </Router>
