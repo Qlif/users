@@ -6,7 +6,7 @@ const initialState = {
 
 export const usersPostReducer = (state = initialState, action)=>{
   switch (action.type){
-    case type.SET_USER_POSTS:
+    case type.GET_USER_POSTS_SUCCESS:
       return {
         ...state,
         userPosts: action.payload

@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
-import {setUsersPosts} from '../../redux/actions/actions'
+import {getUserPostsCall} from '../../redux/actions/actions'
 import {Link} from 'react-router-dom';
 
 function UserPosts(props) {
@@ -8,7 +8,7 @@ function UserPosts(props) {
   const userPosts = useSelector(state => state.userPostsStore.userPosts)
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(setUsersPosts(idUser));
+    dispatch(getUserPostsCall(idUser));
   }, [dispatch,idUser]);
 
   let content;

@@ -6,7 +6,7 @@ import * as action from '../../redux/actions/actions'
 const  Users = () => {
   const dispatch = useDispatch();
   useEffect(()=>{
-    dispatch(action.setUsers());
+    dispatch(action.getUsersCall());
   },[dispatch]);
 
   const users = useSelector(state => state.usersStore.users);
