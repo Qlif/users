@@ -13,9 +13,10 @@ export function getUsersSuccess(users){
   }
 }
 
-export function getUsersFailure(){
+export function getUsersFailure(err){
   return{
     type: type.GET_USERS_FAILURE,
+    payload: err
   }
 }
 
@@ -26,16 +27,17 @@ export function getUserPostsCall(id){
   }
 }
 
-export function getUserPostsSuccess(users){
+export function getUserPostsSuccess(posts){
   return{
-    type: type.GET_USERS_SUCCESS,
-    payload: users
+    type: type.GET_USER_POSTS_SUCCESS,
+    payload: posts
   }
 }
 
-export function getUserPostsFailure(){
+export function getUserPostsFailure(err){
   return{
     type: type.GET_USER_POSTS_FAILURE,
+    payload: err
   }
 }
 

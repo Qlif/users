@@ -2,7 +2,7 @@ import React, {useEffect} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import {getUserPostsCall} from '../../redux/actions/actions'
 import {Link} from 'react-router-dom';
-import {usersPostSelector} from '../../selectors/selectors';
+import {usersPostSelector} from '../../selectors/userPostsSelector';
 
 function UserPosts(props) {
   const idUser = props.match.params.idUser

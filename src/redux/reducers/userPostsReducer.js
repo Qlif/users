@@ -4,7 +4,7 @@ const initialState = {
   userPosts:[]
 };
 
-export const usersPostReducer = (state = initialState, action)=>{
+export const userPostsReducer = (state = initialState, action)=>{
   switch (action.type){
     case type.GET_USER_POSTS_SUCCESS:
       return {
