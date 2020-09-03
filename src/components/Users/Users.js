@@ -2,6 +2,7 @@ import React, {useEffect} from 'react';
 import UserInfo from './UserInfo';
 import {useDispatch, useSelector} from 'react-redux';
 import * as action from '../../redux/actions/actions'
+import {usersSelector} from '../../selectors/selectors';
 
 const  Users = () => {
   const dispatch = useDispatch();
@@ -9,7 +10,7 @@ const  Users = () => {
     dispatch(action.getUsersCall());
   },[dispatch]);
 
-  const users = useSelector(state => state.usersStore.users);
+  const users = useSelector(usersSelector);
 
   let content;
   if(!users.length){

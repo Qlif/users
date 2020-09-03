@@ -2,10 +2,11 @@ import React, {useEffect} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import {getUserPostsCall} from '../../redux/actions/actions'
 import {Link} from 'react-router-dom';
+import {usersPostSelector} from '../../selectors/selectors';
 
 function UserPosts(props) {
   const idUser = props.match.params.idUser
-  const userPosts = useSelector(state => state.userPostsStore.userPosts)
+  const userPosts = useSelector(usersPostSelector);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getUserPostsCall(idUser));
